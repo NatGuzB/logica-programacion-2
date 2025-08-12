@@ -1,0 +1,18 @@
+INICIO
+  REPETIR
+    temperatura = SOLICITAR "Ingresa temperatura en Celsius"
+    temperaturaNum = CONVERTIR_A_NUMERO(temperatura)
+    
+    SI ES_NUMERO_VALIDO(temperaturaNum) ENTONCES
+      fahrenheit = (temperaturaNum * 9/5) + 32
+      kelvin = temperaturaNum + 273.15
+      
+      MOSTRAR "Grados Kelvin: " + kelvin
+      MOSTRAR "Grados Fahrenheit: " + fahrenheit
+      
+      SALIR del bucle
+    SINO
+      MOSTRAR "Error: Por favor ingresa un número válido"
+    FIN SI
+  HASTA que sea número válido
+FIN
